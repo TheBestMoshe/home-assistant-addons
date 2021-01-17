@@ -41,6 +41,8 @@ default_superuser:
   password: changeme
 ```
 
+_Note: Links to an option's documentation uses "Scroll to Text Fragment" feature in Chrome/Chromium. If your browser supports it, it will scroll down to the relevant config option in the Paperless docs._
+
 ### Option: `filename.format`
 
 https://paperless-ng.readthedocs.io/en/latest/advanced_usage.html#advanced-file-name-handling
