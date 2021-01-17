@@ -51,6 +51,24 @@ Can be `eng`, `deu`, `fra`, `ita`, `spa`.
 This can be a combination of multiple languages such as deu+eng, in which case tesseract will use whatever language matches best.
 [Docs](https://paperless-ng.readthedocs.io/en/latest/configuration.html#:~:text=PAPERLESS_OCR_LANGUAGE)
 
+### Option: `ocr.mode`
+
+Can be `skip`, `skip_noarchive`, `redo`, `force`
+
+[Docs](https://paperless-ng.readthedocs.io/en/latest/configuration.html#:~:text=PAPERLESS_OCR_MODE)
+
+### Option: `ocr.image_dpi`
+
+Optional
+
+[Docs](https://paperless-ng.readthedocs.io/en/latest/configuration.html#:~:text=PAPERLESS_OCR_IMAGE_DPI)
+
+### Option: `ocr.output_type`
+
+Can be `pdf`, `pdfa`, `pdfa-1`, `pdfa-2`, `pdfa-3`
+
+[Docs](https://paperless-ng.readthedocs.io/en/latest/configuration.html#:~:text=PAPERLESS_OCR_OUTPUT_TYPE)
+
 ### Option: `default_superuser`
 
 When the addon starts up, if this user is not created, it will create it.

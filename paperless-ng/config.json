@@ -21,7 +21,10 @@
       "format": "{created_year}/{correspondent}/{title}"
     },
     "ocr": {
-      "language": "eng"
+      "language": "eng",
+      "image_dpi": null,
+      "mode": "skip",
+      "output_type": "pdfa"
     },
     "default_superuser": {
       "username": null,
@@ -31,10 +34,13 @@
   },
   "schema": {
     "filename": {
-      "format": "str"
+      "format": "str?"
     },
     "ocr": {
-      "language": "str"
+      "language": "str",
+      "image_dpi": "int?",
+      "mode": "str",
+      "output_type": "str"
     },
     "default_superuser": {
       "username": "str",
