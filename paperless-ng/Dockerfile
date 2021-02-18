@@ -21,6 +21,7 @@ RUN apt-get update \
     libpq-dev \
     libqpdf-dev \
     libxml2 \
+    libxml2-dev \
     libxslt1-dev \
     optipng \
     p7zip-full \
@@ -59,8 +60,8 @@ RUN cp -R ./src /usr/src/paperless/
 
 
 # Install requirements
-RUN pip3 install --upgrade supervisor setuptools \
-    && pip3 install --no-cache-dir -r requirements.txt
+RUN python3 -m pip install --upgrade pip supervisor setuptools \
+    && python3 -m pip install --no-cache-dir -r requirements.txt
 
 #### Redis Setup
 RUN apt-get install redis-server redis-tools -y
@@ -74,7 +75,7 @@ RUN apt-get -y purge build-essential libqpdf-dev \
 # copy scripts
 # FROM ORIGINAL DOCKER FILE: this fixes issues with imagemagick and PDF
 RUN cp docker/imagemagick-policy.xml /etc/ImageMagick-6/policy.xml
-RUN cp  docker/gunicorn.conf.py /usr/src/paperless
+RUN cp gunicorn.conf.py /usr/src/paperless
 RUN cp docker/supervisord.conf /etc/supervisord.conf
 # RUN cp docker/docker-entrypoint.sh /sbin/docker-entrypoint.sh
 COPY scripts/docker-entrypoint.sh /sbin/docker-entrypoint.sh
