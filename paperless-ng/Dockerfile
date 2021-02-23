@@ -19,7 +19,6 @@ RUN apt-get update \
     libssl-dev \
     liblept5 \
     libmagic-dev \
-    libpoppler-cpp-dev \
     libpq-dev \
     libqpdf-dev \
     libxml2 \
@@ -47,7 +46,7 @@ RUN apt-get update \
     && mkdir /var/log/supervisord /var/run/supervisord
 
 # Download release of Paperless-ng
-RUN wget -O paperless.tar.xz https://github.com/jonaswinkler/paperless-ng/releases/download/ng-1.1.4/paperless-ng-1.1.4.tar.xz \
+RUN wget -O paperless.tar.xz https://github.com/jonaswinkler/paperless-ng/releases/download/ng-1.2.0/paperless-ng-1.2.0.tar.xz \
     && 7z x paperless.tar.xz \
     && 7z x paperless.tar -o/usr/src/ \
     && cd /usr/src 
