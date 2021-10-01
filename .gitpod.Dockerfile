@@ -1,6 +1,5 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:debian
+FROM gitpod/workspace-full
 
-WORKDIR /workspaces
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
