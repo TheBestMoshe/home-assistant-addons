@@ -3,11 +3,6 @@ FROM gitpod/workspace-full
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# Set Docker daemon config
-RUN \
-    mkdir -p /etc/docker \
-    && echo '{"storage-driver": "vfs"}' > /etc/docker/daemon.json
-
 # Installa aditional tools
 RUN \
     apt-get update \
