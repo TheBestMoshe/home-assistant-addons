@@ -22,7 +22,7 @@ RUN \
     && mv -f "./shellcheck-stable/shellcheck" "/usr/bin/shellcheck" \
     && rm -rf "./shellcheck-stable"
 
+USER gitpod
+
 # Generate a machine-id for this container
 RUN rm /etc/machine-id && dbus-uuidgen --ensure=/etc/machine-id
-
-USER gitpod
