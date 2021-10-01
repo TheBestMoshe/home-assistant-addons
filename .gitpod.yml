@@ -1,0 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Home Assistant
+    command: docker exec -ti hassio_cli /usr/bin/cli.sh
