@@ -20,7 +20,7 @@ https://github.com/TheBestMoshe/home-assistant-addons
 
 
 ## Develop on Gitpod
-I use Gitpod to develop my Home Assistant addons. Us the commands listed below to build and run the addons.
+I use [Gitpod](https://gitpod.io/) to develop my Home Assistant addons. Us the commands listed below to build and run the addons.
 
 ### Paperless-ng
 
