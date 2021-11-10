@@ -1,7 +1,7 @@
 tasks:
   - name: Home Assistant
     init: docker build --build-arg BUILD_FROM="homeassistant/amd64-base-debian:latest" -t local/paperless-ng ./paperless-ng/
-    command: sudo ./.gitpod/superviser.sh
+    command: docker run -p 8000:8000 -v $PWD/paperless-ng/data:/data local/paperless-ng
 
 vscode:
   extensions:
