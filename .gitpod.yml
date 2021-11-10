@@ -1,6 +1,9 @@
-image:
-  file: .gitpod/Dockerfile
-
 tasks:
   - name: Home Assistant
+    init: docker build --build-arg BUILD_FROM="homeassistant/amd64-base-debian:latest" -t local/paperless-ng ./paperless-ng/
     command: sudo ./.gitpod/superviser.sh
+
+vscode:
+  extensions:
+    - streetsidesoftware.code-spell-checker
+    - esbenp.prettier-vscode
