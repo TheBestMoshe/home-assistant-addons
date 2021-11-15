@@ -28,3 +28,10 @@ I use [Gitpod](https://gitpod.io/) to develop my Home Assistant addons. Use the 
 docker build --build-arg BUILD_FROM="homeassistant/amd64-base-debian:latest" -t local/paperless-ng ./paperless-ng/
 docker run -p 8000:8000 -v $PWD/paperless-ng/data:/data local/paperless-ng
 ```
+
+### Cal.com
+
+```
+docker build -t cal.com cal.com/.
+docker run -p 3000:3000 -v $PWD/cal.com/data:/data --net=host cal.com:latest
+```

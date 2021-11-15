@@ -6,8 +6,13 @@ tasks:
 ports:
   - port: 8000 # Paperless-ng
     onOpen: ignore
+  - port: 3000 # Cal.com
+    onOpen: ignore
+    visibility: public
 
 vscode:
   extensions:
     - streetsidesoftware.code-spell-checker
     - esbenp.prettier-vscode
+    - ms-azuretools.vscode-docker
+    - foxundermoon.shell-format

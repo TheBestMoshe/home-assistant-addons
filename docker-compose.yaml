@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+  postgres:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ""
+      POSTGRES_HOST_AUTH_METHOD: trust
+  cal:
+    build: ./cal.com
+    ports:
+      - 3000:3000
+      - 5555:5555
+    volumes:
+      - $PWD/cal.com/data:/data
+    depends_on:
+      - postgres
+volumes:
+  db_data:

@@ -1,0 +1,35 @@
+{
+  "name": "Cal.com",
+  "version": "0.0.1",
+  "slug": "cal.com",
+  "url": "https://github.com/calendso/calendso",
+  "description": "The open source Calendly alternative. You are in charge of your own data, workflow and appearance.",
+  "webui": "http://[HOST]:[PORT:3000]",
+  "stage": "experimental",
+  "startup": "system",
+  "boot": "auto",
+  "ports": {
+    "3000/tcp": 3000,
+    "5555/tct": 5555
+  },
+  "ports_description": {
+    "3000/tcp": "Web interface",
+    "5555/tcp": "Prisma studio"
+  },
+  "options": {
+    "database_url": null,
+    "expose_prisma_studio": false,
+    "base_url": null,
+    "jwt_secret": null,
+    "calendso_encryption_key": null,
+    "google_api_credentials_base_64": null
+  },
+  "schema": {
+    "database_url": "str",
+    "expose_prisma_studio": "bool",
+    "base_url": "str",
+    "jwt_secret": "str",
+    "calendso_encryption_key": "str",
+    "google_api_credentials_base_64": "str"
+  }
+}
