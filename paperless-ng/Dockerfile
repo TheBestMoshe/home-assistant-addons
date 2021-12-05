@@ -45,7 +45,7 @@ RUN apt-get update \
     zlib1g \
     && mkdir /var/log/supervisord /var/run/supervisord
 
-RUN wget -O paperless.tar.xz https://github.com/jonaswinkler/paperless-ng/releases/download/ng-1.4.0/paperless-ng-1.4.0.tar.xz \
+RUN wget -O paperless.tar.xz https://github.com/jonaswinkler/paperless-ng/releases/download/ng-1.5.0/paperless-ng-1.5.0.tar.xz \
     && 7z x paperless.tar.xz \
     && 7z x paperless.tar -o/usr/src/ \
     && cd /usr/src 
