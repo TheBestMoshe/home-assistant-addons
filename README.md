@@ -31,7 +31,18 @@ docker run -p 8000:8000 -v $PWD/paperless-ng/data:/data local/paperless-ng
 
 ### Cal.com
 
+Create a file `cal.com/data/options.json` with the following contents (modify it to suit your needs):
+
 ```
-docker build -t cal.com cal.com/.
-docker run -p 3000:3000 -v $PWD/cal.com/data:/data --net=host cal.com:latest
+{
+    "database_url": "postgresql://postgres:postgres@postgres:5432/cal?schema=public",
+    "base_url": "<gitpod url with port>",
+    "jwt_secret": "secret",
+    "calendso_encryption_key": "ejfoewurf939r3"
+}
+```
+
+```
+docker-compose build
+docker-compose up
 ```
