@@ -11,6 +11,7 @@ WORKDIR /home/cal
 RUN git clone https://github.com/calendso/calendso.git
 
 WORKDIR /home/cal/calendso
+RUN git checkout 11e7779a585a0fcded5a02619332333a85d2cdc4
 
 RUN yarn install
 
