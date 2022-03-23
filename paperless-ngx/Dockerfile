@@ -9,6 +9,7 @@ RUN apt-get update \
     file \
     fonts-liberation \
     gettext \
+    gosu \
     ghostscript \
     gnupg \
     icc-profiles-free \
@@ -45,12 +46,12 @@ RUN apt-get update \
     zlib1g \
     && mkdir /var/log/supervisord /var/run/supervisord
 
-RUN wget -O paperless.tar.xz https://github.com/jonaswinkler/paperless-ng/releases/download/ng-1.5.0/paperless-ng-1.5.0.tar.xz \
+RUN wget -O paperless.tar.xz https://github.com/paperless-ngx/paperless-ngx/releases/download/ngx-1.6.0/paperless-ngx-1.6.0.tar.xz \
     && 7z x paperless.tar.xz \
     && 7z x paperless.tar -o/usr/src/ \
     && cd /usr/src 
 
-WORKDIR /usr/src/paperless-ng/
+WORKDIR /usr/src/paperless-ngx/
 
 # We need to make the directory before coping to it
 RUN mkdir -p /usr/src/paperless/src
@@ -80,6 +81,7 @@ RUN cp gunicorn.conf.py /usr/src/paperless
 RUN cp docker/supervisord.conf /etc/supervisord.conf
 # RUN cp docker/docker-entrypoint.sh /sbin/docker-entrypoint.sh
 COPY scripts/docker-entrypoint.sh /sbin/docker-entrypoint.sh
+COPY scripts/docker-prepare.sh /sbin/docker-prepare.sh
 
 
 WORKDIR /usr/src/paperless
