@@ -18,6 +18,7 @@
   },
   "map": ["share:rw"],
   "options": {
+    "url": null,
     "filename": {
       "format": "{created_year}/{correspondent}/{title}"
     },
@@ -31,6 +32,7 @@
     }
   },
   "schema": {
+    "url": "str",
     "filename": {
       "format": "str"
     },
