@@ -34,7 +34,8 @@ Another way is to make a copy of the `data` and `media` directories.
 filename:
   format: "{created_year}/{correspondent}/{title}"
 ocr:
-  language: eng
+  language: eng+swe
+  languages: swe
 default_superuser:
   username: admin
   email: admin@example.com
@@ -50,6 +51,14 @@ https://paperless-ngx.readthedocs.io/en/latest/advanced_usage.html#advanced-file
 Can be `eng`, `deu`, `fra`, `ita`, `spa`.
 This can be a combination of multiple languages such as deu+eng, in which case tesseract will use whatever language matches best.
 [Docs](https://paperless-ngx.readthedocs.io/en/latest/configuration.html#ocr-settings)
+
+### Option: `ocr.languages`
+
+Extra languages to install, space separated list.
+
+e.g. `swe lat`
+
+Available languages are documented in here: https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html
 
 ### Option: `default_superuser`
 
